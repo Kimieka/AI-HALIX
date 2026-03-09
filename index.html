@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HALIX AI Simulator</title>
+
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2>HALIX AI Assembly Simulator</h2>
+
+<textarea id="code">
+
+LOAD R1 5
+LOAD R2 3
+ADD R1 R2
+STORE R1 10
+
+</textarea>
+
+<br>
+
+<button onclick="loadProgram()">Load Program</button>
+<button onclick="stepCPU()">Step</button>
+
+<h3>Registers</h3>
+
+<div id="registers">
+R1 : 0<br>
+R2 : 0<br>
+R3 : 0<br>
+ACC : 0
+</div>
+
+<h3>Instruction</h3>
+
+<div id="instruction"></div>
+
+<h3>AI Explanation</h3>
+
+<div id="explanation"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
